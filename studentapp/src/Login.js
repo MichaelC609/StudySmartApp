@@ -26,7 +26,7 @@ function Login()
 
 					<div className='signUp-link'>
 						<p>Don't have an account? 
-							<a href='#'>Sign up here!</a></p>
+							<a href='#'> Sign up here!</a></p>
 					</div>
 				</form>
 			</div>

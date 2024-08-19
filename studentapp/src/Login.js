@@ -12,13 +12,11 @@ function Login()
 					<div className='input-box'>
 						<input type='text' 
 						placeholder='Username' required />
-						<i class='bx bx-user'></i>
 					</div>
 
 					<div className='input-box'>
 						<input type='password' 
 						placeholder='Password' required />
-						<i class='bx bxs-lock-alt' ></i>
 					</div>
 
 					<button className='btn' 

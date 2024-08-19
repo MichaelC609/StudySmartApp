@@ -4,13 +4,12 @@ import axios from 'axios';
 
 function Signup()
 {
-	const [name, setName] = useState();
 	const [email, setEmail] = useState();
 	const [password, setPassword] = useState();
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		axios.post('https://localhost:3001/user', {name, email, password})
+		axios.post('https://localhost:3001/user', {email, password})
 		.then(result => console.log(result))
 		.catch(err => console.log(err));
 	}
@@ -23,10 +22,9 @@ function Signup()
 
 				<div className='input-box'>
 						<input type='text' 
-						placeholder='Username' required 
+						placeholder='Email' required 
 						onChange={(e) => setEmail(e.target.value)}
 						/>
-						<i class='bx bx-user'></i>
 					</div>
 
 				<div className='input-box'>
@@ -34,7 +32,6 @@ function Signup()
 					placeholder='Password' required 
 					onChange={(e) => setPassword(e.target.value)}
 					/>
-					<i class='bx bxs-lock-alt' ></i>
 				</div>
 
 				<button className='btn' type='submit'> Register </button>

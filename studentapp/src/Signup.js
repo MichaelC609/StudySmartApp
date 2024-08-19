@@ -6,7 +6,7 @@ function Signup()
 		<>
 			<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
 			<div className='wrapper'>
-				<h1>Sign up!</h1>	
+				<h1>Create an account!</h1>	
 
 				<div className='input-box'>
 						<input type='text' 
@@ -18,6 +18,14 @@ function Signup()
 					<input type='password' 
 					placeholder='Password' required />
 					<i class='bx bxs-lock-alt' ></i>
+				</div>
+
+				<button className='btn' type='submit'> Register </button>
+
+				<div className='signUp-link'>
+					<p>Already have an account?  
+						<a href='#'> Log in here!</a>
+					</p>
 				</div>
 			</div>
 		</>

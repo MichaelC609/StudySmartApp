@@ -1,7 +1,20 @@
+import { useState } from 'react';
 import '../src/Signup.css'
+import axios from 'axios';
 
 function Signup()
 {
+	const [name, setName] = useState();
+	const [email, setEmail] = useState();
+	const [password, setPassword] = useState();
+	
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		axios.post('', {name, email, password})
+		.then(result => console.log(result))
+		.catch(err => console.log(err));
+	}
+
 	return(
 		<>
 			<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
@@ -10,13 +23,17 @@ function Signup()
 
 				<div className='input-box'>
 						<input type='text' 
-						placeholder='Username' required />
+						placeholder='Username' required 
+						onChange={(e) => setEmail(e.target.value)}
+						/>
 						<i class='bx bx-user'></i>
 					</div>
 
 				<div className='input-box'>
 					<input type='password' 
-					placeholder='Password' required />
+					placeholder='Password' required 
+					onChange={(e) => setPassword(e.target.value)}
+					/>
 					<i class='bx bxs-lock-alt' ></i>
 				</div>
 

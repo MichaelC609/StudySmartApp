@@ -1,15 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const EmployeeModel = require('./Models/Employee');
+const StudentModel = require('./Models/Student');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 app.post('/user', (req, res) => {
-	EmployeeModel.create(req.body)
-	.then(employees => res.json(employees))
+	StudentModel.create(req.body)
+	.then(students => res.json(students))
 	.catch(err => res.json(err))
 })
 

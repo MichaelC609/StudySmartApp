@@ -20,21 +20,28 @@ function Signup()
 			<div className='wrapper'>
 				<h1>Create an account!</h1>	
 
-				<div className='input-box'>
+				<form onSubmit={handleSubmit}>
+					<div className='input-box'>
 						<input type='text' 
 						placeholder='Email' required 
 						onChange={(e) => setEmail(e.target.value)}
 						/>
 					</div>
 
-				<div className='input-box'>
-					<input type='password' 
-					placeholder='Password' required 
-					onChange={(e) => setPassword(e.target.value)}
-					/>
-				</div>
+					<div className='input-box'>
+						<input type='password' 
+						placeholder='Password' required 
+						onChange={(e) => setPassword(e.target.value)}
+						/>
+					</div>
+				</form>
+				
 
-				<button className='btn' type='submit'> Register </button>
+				<button className='btn' 
+					type='submit'
+				> 
+					Register 
+				</button>
 
 				<div className='signUp-link'>
 					<p>Already have an account?  
